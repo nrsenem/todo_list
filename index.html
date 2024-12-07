@@ -1,0 +1,23 @@
+<!DOCTYPE html>                                                           <!-- HTML5 belgesi olduğunu belirtir-->
+<html lang="en">                                                          <!--HTML belgesinin dilini İngilizce olarak ayarlar-->
+<head>                                                                    <!--HTML belgesinin meta verilerini ve başlık gibi kaynakları içerir-->
+    <meta charset="UTF-8">                                                <!-- Türkçe karakterlerin düzgün görünmesini sağlar-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Mobil uyumluluğu sağlar, cihaz genişliğine göre sayfa boyutunu ayarlar-->
+    <title>TO DO LİST</title>                                             <!--Tarayıcı sekmesinde görünen  sayfa genişliğini belirler-->
+    <link rel="stylesheet" href="style.css">                              <!--Harici bir CSS dosyasını belgeye bağlar-->
+</head>
+<body>                                                                    <!--HTML belgesinin ana içeriğini tanımlar-->
+  <div class="container">                                                 <!--"container" adında bir CSS sınıfına sahip bir kapsayıcı blok oluşturur-->
+    <div class="todo">
+        <h2>YAPILACAKLAR <img src="C:\Users\nrsen\Desktop\TO_DO_LİST\.vscode\resim.png"></h2><!--İkinci seviye başlık etiketi (img src="...") Resim ekler src ile dosya yolunu belirler.-->
+        <div class="row">
+            <input type="text" id="input-box" placeholder=" Görev "><!--Kullanıcının görev yazabileceği bir metin giriş kutusu."placeholder" ile kutuda "Görev" yazısı gösterilir.-->
+            <button onclick="addTask()">Add</button>                      <!--"Add" düğmesi. Tıklandığında addTask() fonksiyonu çalışır-->
+        </div>
+        <ul id="list-container">                                          <!--Yapılacaklar listesini göstermek için sırasız liste-->
+        </ul>
+    </div>
+  </div>  
+  <script src="script.js"></script>                                       <!--Harici bir Javascript dosyasını (script.js) belgeye bağlar-->
+</body>
+</html>

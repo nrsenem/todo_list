@@ -1,0 +1,111 @@
+*{                                        /* *:tüm ögelere etki eder */
+    margin: 0;                            /* Margin ve padding: Varsayılan boşlukları sıfırlar*/
+    padding: 0;
+    font-family: 'Poppins',sans-serif;   /*font-family: yazı tipini belirler. */
+    box-sizing: border-box;              /*box-sizing: Kenar boşluklarını ve içeriği kutu boyutuna dahil eder */
+}
+.container
+{
+    width: 100%;                         /*width: genişliği ayarlar(100%: tam sayfa genişliği) */
+    min-height: 100vh;                   /* min-height: Yüksekliği ayarlar (100vh: En az tam ekran yüksekliği yapar.*/
+    background: lightgreen;            /*background: arka plan rengi*/
+    padding: 10px;
+}
+.todo
+{
+    width: 100%;
+    max-width: 540px;
+    background: rgb(246, 244, 247);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;                 /*border-radius: Kenarları yuvarlar*/
+}
+.todo h2
+{
+    color: rgb(226, 188, 118);
+    display: flex;                      /*display ve align-items: Başlık içeriğini yatay ve dikey olarak hizalar*/
+    align-items: center;
+    margin-bottom: 20px;                /*margin bottom: yazıldı yerde alta bir boşluk ekler. */
+}
+.todo h2 img
+{
+    width: 30px;
+    margin-left: 10px;                 /* Başlık metni ile resim arasına boşluk ekler*/
+}
+.row
+{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;     /* Elemanlar arasına boşluk bırakır*/
+   background: rgb(230, 219, 219);
+   border-radius: 30px;
+   padding-left: 20px;
+   margin-bottom: 25px;
+}
+input
+{
+    flex: 1;                           /* giriş kutusunun genişliğini esnek yapar */
+    border: none;                      /*border ve outline: kenarlık ve odak göstergesini kaldırır. */
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+button
+{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: lightgreen;
+    color: aliceblue;
+    font-size: 16px;
+    cursor:pointer;                   /* Fareyi düğmenin üzerine getirdiğinde işaretçi görünümünü değiştirir. */ 
+    border-radius: 40px;
+}
+ul li
+{
+  list-style: none;                  /* varsayılan madde işaretlerini kaldırır.*/
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;                 /* Kullanıcının metni seçmesini engeller.*/
+  cursor: pointer;
+  position: relative;
+}
+ul li::before
+{
+    content:  '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("C:\\Users\\nrsen\\Desktop\\TO_DO_LİST\\.vscode\\tik.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked                       /* Tamamlanmış görevlerin üstünü çizer*/
+{
+    color: rgb(6, 6, 6);
+    text-decoration: line-through;
+}
+ul li.checked::before               /*Tamamlanmış görev için farklı bir simge gösterir.*/
+{
+    background-image: url("C:\\Users\\nrsen\\Desktop\\TO_DO_LİST\\.vscode\\tik2.png");
+}
+ul li span                          /* Liste ögesine silme düğmesi ekler*/
+{
+   position: absolute;
+   right: 0;
+   top: 5px;
+   width: 40px;
+   height: 40px;
+   font-size: 22px;
+   color: #555;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 50%;
+}
+ul li span:hover                  /*fare üzerine gelince arka plan rengini değiştirir*/
+{
+    background: #edeef0;
+}
